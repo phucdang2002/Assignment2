@@ -1,9 +1,11 @@
+package model;
 
 public class User {
 	private String UserID;
 	private String Password;
 	private String Email;
 	private String UserType;
+	public User() {};
 	public User(String userID, String password, String email, String userType) {
 		UserID = userID;
 		Password = password;
@@ -34,8 +36,10 @@ public class User {
 	public void setUserType(String userType) {
 		UserType = userType;
 	}
-	public void CreateUser() {
-		
+	public User CreateUser(String email, String password) {
+		Email = email;
+		Password = password;
+		return new User("slfdlsflkgjkg", password, email, "tenant");
 	}
 	public void ResetPassword() {
 		
